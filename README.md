@@ -11,9 +11,4 @@ Essentially just allowing a user to enter in a string or string portion and a fi
 
 
 
-## Grrs
-rust powered cli
 
-### Resources 
-
-[rust-lang.org/learn - rust-cli](https://rust-cli.github.io/book/index.html)
