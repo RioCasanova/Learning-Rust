@@ -7,3 +7,6 @@ edition = "2021"
 reqwest = "0.12.12"
 tokio = { version = "1", features = ["full"] }
 scraper = "0.22.0"
+thiserror = "2.0.9"
+url = "2.2.2"
+robots_txt = "0.7.0"
