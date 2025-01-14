@@ -1,3 +1,5 @@
+use std::iter::Product;
+
 use reqwest::{Client, Error};
 use robots_txt::{matcher::SimpleMatcher, Robots};
 use thiserror::*;
@@ -70,6 +72,22 @@ async fn main() -> Result<(), ScrapeError> {
 
     if result == true {
         println!("The site can be crawled!");
+        for url in urls {
+            let response = client.get(url).send().await?;
+            let html = response.text().await?;
+            let document = scraper::Html::parse_document(&html);
+            let html_product_selector = scraper::Selector::parse("li.product").unwrap();
+            let html_products = document.select(&html_product_selector);
+
+            for product in html_products {
+                let for_string = product
+                    .select(&scraper::Selector::parse("a").unwrap())
+                    .next()
+                    .and_then(|a| a.value().attr("href"))
+                    .map(str::to_owned)
+                    .unwrap();
+            }
+        }
     } else {
         println!("The site cannot be crawled.");
     };
