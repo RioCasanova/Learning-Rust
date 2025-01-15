@@ -29,6 +29,6 @@ fn main() {
     // this module.
     cpu3::run_cpu3();
 
-    // cpu4
+    // Introduces logic flow
     cpu4::run_cpu4();
 }
