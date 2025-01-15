@@ -1,0 +1,6 @@
+[package]
+name = "bit_manipulation_concise"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
