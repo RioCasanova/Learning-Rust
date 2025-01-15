@@ -23,6 +23,10 @@ fn main() {
 
     // Note - it may be hard to understand up to this point without prior
     // knowledge of hexadecimals, their digits, and how they relate to bits/bytes
+    // also keep in mind that the first digit in a hexadecimal determines the
+    // interpretation for the entire code and can completely change how it needs
+    // to be used and processed - we see this with the match statement within
+    // this module.
     cpu3::run_cpu3();
 
     // cpu4

@@ -55,7 +55,7 @@ impl CPU {
 
 pub fn run_cpu1() {
     // cpu init
-    let mut cpu = cpu1::CPU {
+    let mut cpu = CPU {
         current_operation: 0,
         registers: [0; 2],
     };
