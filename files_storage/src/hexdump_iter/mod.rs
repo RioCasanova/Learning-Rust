@@ -2,9 +2,8 @@ use std::env;
 use std::fs::File;
 use std::io::prelude::*;
 
-const BYTES_PER_LINE: usize = 16; // <1>
-
 pub fn run_hexdump_iter() {
+    const BYTES_PER_LINE: usize = 16; // <1>
     let arg1 = env::args().nth(1);
 
     let fname = arg1.expect("usage: fview FILENAME");
